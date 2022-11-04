@@ -1,20 +1,30 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using SpiceRanch.structures;
 
-namespace SpiceRanch
+namespace SpiceRanch.forms
 {
     public partial class LoginForm : Form
     {
         public LoginForm()
         {
             InitializeComponent();
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            lblError.Text = "";
+            string username = rtxtUsername.Text;
+            string password = rtxtPassword.Text;
+            Client? client = SpiceRanch.GetClientManager().Login(username, password);
+            if (client != null)
+            {
+                this.Visible = false;
+                OrderForm orderForm = new OrderForm();
+                orderForm.Visible = true;
+            }
+            else
+            {
+                lblError.Text = Utils.ClientLoginError;
+            }
         }
     }
 }
