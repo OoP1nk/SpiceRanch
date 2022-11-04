@@ -36,9 +36,9 @@ X:\OneDrive - Huddersfield New College\IT - Lv3 Ext Diploma\Unit 4 - Programming
 X:\OneDrive - Huddersfield New College\IT - Lv3 Ext Diploma\Unit 4 - Programming\AS\project\SpiceRanch\obj\Debug\net6.0-windows\SpiceRanch.genruntimeconfig.cache
 X:\OneDrive - Huddersfield New College\IT - Lv3 Ext Diploma\Unit 4 - Programming\AS\project\SpiceRanch\obj\Debug\net6.0-windows\ref\SpiceRanch.dll
 C:\Users\22000446\OneDrive - Huddersfield New College\IT - Lv3 Ext Diploma\Unit 4 - Programming\AS\project\SpiceRanch\obj\Debug\net6.0-windows\SpiceRanch.HelpForm.resources
-C:\Users\22000446\OneDrive - Huddersfield New College\IT - Lv3 Ext Diploma\Unit 4 - Programming\AS\project\SpiceRanch\obj\Debug\net6.0-windows\SpiceRanch.LoginForm.resources
 X:\OneDrive - Huddersfield New College\IT - Lv3 Ext Diploma\Unit 4 - Programming\AS\project\SpiceRanch\obj\Debug\net6.0-windows\SpiceRanch.LoginForm.resources
 X:\OneDrive - Huddersfield New College\IT - Lv3 Ext Diploma\Unit 4 - Programming\AS\project\SpiceRanch\obj\Debug\net6.0-windows\SpiceRanch.csproj.CopyComplete
 C:\Users\22000446\OneDrive - Huddersfield New College\IT - Lv3 Ext Diploma\Unit 4 - Programming\AS\project\SpiceRanch\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
 C:\Users\22000446\OneDrive - Huddersfield New College\IT - Lv3 Ext Diploma\Unit 4 - Programming\AS\project\SpiceRanch\obj\Debug\net6.0-windows\SpiceRanch.csproj.CopyComplete
 X:\OneDrive - Huddersfield New College\IT - Lv3 Ext Diploma\Unit 4 - Programming\AS\project\SpiceRanch\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
+C:\Users\22000446\OneDrive - Huddersfield New College\IT - Lv3 Ext Diploma\Unit 4 - Programming\AS\project\SpiceRanch\obj\Debug\net6.0-windows\SpiceRanch.forms.LoginForm.resources

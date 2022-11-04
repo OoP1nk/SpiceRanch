@@ -1,5 +1,5 @@
 using SpiceRanch.managers;
-using System.Runtime.InteropServices;
+using SpiceRanch.forms;
 
 namespace SpiceRanch
 {
@@ -23,7 +23,7 @@ namespace SpiceRanch
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new OrderForm());
+            Application.Run(new LoginForm());
         }
 
         public static ProductManager GetProductManager()
