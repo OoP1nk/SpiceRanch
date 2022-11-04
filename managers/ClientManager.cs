@@ -17,22 +17,20 @@ namespace SpiceRanch.managers
         {
             this.clients.ForEach((client) =>
             {
-                if (client == null) return;
                 if (client.name == name && client.password == password)
                 {
                     this.activeClient = client;
                 }
-                this.activeClient = null;
             });
             return this.activeClient;
         }
 
         public void Logout()
         {
-
+            this.activeClient = null;
         }
 
-        public Client GetActiveClient()
+        public Client? GetActiveClient()
         {
             return this.activeClient;
         }
