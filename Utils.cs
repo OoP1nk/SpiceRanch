@@ -4,11 +4,22 @@ using System;
 using System.Text.Json.Nodes;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using System.Xml.Linq;
+using System.Runtime.Serialization;
 
 namespace SpiceRanch
 {
     internal class Utils
     {
+        /**
+         * Error message when the client returns null
+         */
+        public const string ClientLoginError = "Could not find a user with those credentials, Please try again!";
+
+        /**
+         * Mock REST API response for products
+         * (*) Uses given data in scenario
+         * (*) http://localhost:3000/api/products
+         */
         public const string APIRestProductResponse = @"[
           {
             ""id"": 1,
@@ -78,62 +89,37 @@ namespace SpiceRanch
         ]"
         ;
 
+        /**
+         * Mock client response
+         * (*) Doesn't use data specified by scenario. (All Mock Data)
+         * (*) http://localhost:3000/api/clients
+         */
         public const string APIRestClientResponse = @"[
           {
             ""id"": 1,
-            ""uuid"": ""9ed6a19c-2933-44b5-9402-afe9b054fb0b"",
-            ""name"": ""John"",
-            ""password"": ""1234"",
-            ""address"": ""123 Cultson Ave."",
-            ""postcode"": ""DH4 2AS"",
-            ""email"": ""something @gmail.com"",
-            ""contact_number"": ""01829 192845""
-          },
-          {
-            ""id"": 2,
-            ""uuid"": ""67a85f6f-db8a-46d2-9cca-93fb3391c398"",
-            ""name"": ""Sam"",
-            ""password"": ""1234"",
-            ""address"": ""123 Cultson Ave."",
-            ""postcode"": ""DD4 6AH"",
-            ""email"": ""something @gmail.com"",
-            ""contact_number"": ""04638 415433""
-          },
-          {
-            ""id"": 3,
-            ""uuid"": ""88c852f4-623c-47a9-ba06-2dbe17b9e107"",
-            ""name"": ""Dave"",
-            ""password"": ""1234"",
-            ""address"": ""123 Cultson Ave."",
-            ""postcode"": ""LH4 1AT"",
-            ""email"": ""something @gmail.com"",
-            ""contact_number"": ""09375 816338""
-          },
-          {
-            ""id"": 4,
             ""uuid"": ""dca206e5-da29-4b66-bf08-e58bade0f170"",
             ""name"": ""Jarvis"",
-            ""password"": ""1234"",
+            ""password"": ""Jarvis22Tst"",
             ""address"": ""123 Cultson Ave."",
             ""postcode"": ""LH7 2AG"",
             ""email"": ""something @gmail.com"",
             ""contact_number"": ""01946 849362""
           },
           {
-            ""id"": 5,
+            ""id"": 2,
             ""uuid"": ""71576db0-4965-4ca3-9248-67454a4a8bb2"",
             ""name"": ""Noah"",
-            ""password"": ""1234"",
+            ""password"": ""Noah22Tst"",
             ""address"": ""123 Cultson Ave."",
             ""postcode"": ""PD2 7KA"",
             ""email"": ""something @gmail.com"",
             ""contact_number"": ""02165 648633""
           },
           {
-            ""id"": 6,
+            ""id"": 3,
             ""uuid"": ""5a9c101c-9fc9-40d7-a49b-8fb4b12304a4"",
             ""name"": ""Bryan"",
-            ""password"": ""1234"",
+            ""password"": ""Bran22Tst"",
             ""address"": ""123 Cultson Ave."",
             ""postcode"": ""DJ3 8EH"",
             ""email"": ""something @gmail.com"",
