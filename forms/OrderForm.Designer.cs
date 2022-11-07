@@ -39,8 +39,6 @@
             this.pnlLogo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblOrderNow = new System.Windows.Forms.Label();
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.cmbOrder = new System.Windows.Forms.Button();
             this.lblBasket = new System.Windows.Forms.Label();
@@ -70,7 +68,7 @@
             // rdoDelivery
             // 
             this.rdoDelivery.AutoSize = true;
-            this.rdoDelivery.Location = new System.Drawing.Point(225, 147);
+            this.rdoDelivery.Location = new System.Drawing.Point(225, 104);
             this.rdoDelivery.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.rdoDelivery.Name = "rdoDelivery";
             this.rdoDelivery.Size = new System.Drawing.Size(68, 21);
@@ -82,7 +80,7 @@
             // rdoCollection
             // 
             this.rdoCollection.AutoSize = true;
-            this.rdoCollection.Location = new System.Drawing.Point(225, 178);
+            this.rdoCollection.Location = new System.Drawing.Point(225, 135);
             this.rdoCollection.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.rdoCollection.Name = "rdoCollection";
             this.rdoCollection.Size = new System.Drawing.Size(80, 21);
@@ -94,7 +92,7 @@
             // cmboItems
             // 
             this.cmboItems.FormattingEnabled = true;
-            this.cmboItems.Location = new System.Drawing.Point(225, 93);
+            this.cmboItems.Location = new System.Drawing.Point(225, 55);
             this.cmboItems.Name = "cmboItems";
             this.cmboItems.Size = new System.Drawing.Size(201, 25);
             this.cmboItems.TabIndex = 4;
@@ -102,7 +100,7 @@
             // 
             // scrlQuantity
             // 
-            this.scrlQuantity.Location = new System.Drawing.Point(225, 126);
+            this.scrlQuantity.Location = new System.Drawing.Point(225, 83);
             this.scrlQuantity.Maximum = 10;
             this.scrlQuantity.Minimum = 1;
             this.scrlQuantity.Name = "scrlQuantity";
@@ -182,28 +180,10 @@
             this.lblOrderNow.TabIndex = 9;
             this.lblOrderNow.Text = "Order Now!";
             // 
-            // txtName
-            // 
-            this.txtName.Location = new System.Drawing.Point(225, 58);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(201, 23);
-            this.txtName.TabIndex = 10;
-            this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(176, 61);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 17);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "Name:";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(142, 96);
+            this.label3.Location = new System.Drawing.Point(136, 58);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(77, 17);
             this.label3.TabIndex = 12;
@@ -212,7 +192,7 @@
             // cmbOrder
             // 
             this.cmbOrder.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmbOrder.Location = new System.Drawing.Point(225, 223);
+            this.cmbOrder.Location = new System.Drawing.Point(225, 180);
             this.cmbOrder.Name = "cmbOrder";
             this.cmbOrder.Size = new System.Drawing.Size(90, 31);
             this.cmbOrder.TabIndex = 13;
@@ -232,7 +212,7 @@
             // lblTotal
             // 
             this.lblTotal.AutoSize = true;
-            this.lblTotal.Location = new System.Drawing.Point(225, 203);
+            this.lblTotal.Location = new System.Drawing.Point(225, 160);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(38, 17);
             this.lblTotal.TabIndex = 15;
@@ -248,8 +228,6 @@
             this.Controls.Add(this.lblBasket);
             this.Controls.Add(this.cmbOrder);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtName);
             this.Controls.Add(this.lblOrderNow);
             this.Controls.Add(this.pnlNav);
             this.Controls.Add(this.lstbBastket);
@@ -284,8 +262,6 @@
         private PictureBox pictureBox1;
         private Button cmbHelp;
         private Label lblOrderNow;
-        private TextBox txtName;
-        private Label label2;
         private Label label3;
         private Button cmbOrder;
         private Label lblBasket;

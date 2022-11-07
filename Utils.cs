@@ -25,37 +25,43 @@ namespace SpiceRanch
             ""id"": 1,
             ""uuid"": ""d24bcac5-daac-4872-93c3-befd60d92c30"",
             ""name"": ""Chicken Korma"",
-            ""price"": 3.99
+            ""price"": 3.99,
+            ""sides"": []
           },
           {
             ""id"": 2,
             ""uuid"": ""34aebce3-f68f-4ae9-ba10-567c0c1a1c6b"",
             ""name"": ""Chicken Tikka"",
-            ""price"": 4.99
+            ""price"": 4.99,
+            ""sides"": []
           },
           {
             ""id"": 3,
             ""uuid"": ""c441e3f3-b5ee-4101-8c4a-9fdd954bb503"",
             ""name"": ""King Prawn"",
-            ""price"": 5.99
+            ""price"": 5.99,
+            ""sides"": []
           },
           {
             ""id"": 4,
             ""uuid"": ""9f078de8-269b-4337-a124-b5927a3018c5"",
             ""name"": ""Margherita Pizza"",
-            ""price"": 6.99
+            ""price"": 6.99,
+            ""sides"": []
           },
           {
             ""id"": 5,
             ""uuid"": ""9971c492-638e-452a-9bbc-f713e86c3333"",
             ""name"": ""Pepperoni Pizza"",
-            ""price"": 7.99
+            ""price"": 7.99,
+            ""sides"": []
           },
           {
             ""id"": 6,
             ""uuid"": ""616e0b4c-97dd-4a84-80c6-15ac67b95581"",
             ""name"": ""Vegetarian Pizza"",
-            ""price"": 5.99
+            ""price"": 5.99,
+            ""sides"": []
           },
           {
             ""id"": 7,
@@ -102,7 +108,7 @@ namespace SpiceRanch
             ""password"": ""Jarvis22Tst"",
             ""address"": ""123 Cultson Ave."",
             ""postcode"": ""LH7 2AG"",
-            ""email"": ""something @gmail.com"",
+            ""email"": ""something@gmail.com"",
             ""contact_number"": ""01946 849362""
           },
           {
@@ -112,7 +118,7 @@ namespace SpiceRanch
             ""password"": ""Noah22Tst"",
             ""address"": ""123 Cultson Ave."",
             ""postcode"": ""PD2 7KA"",
-            ""email"": ""something @gmail.com"",
+            ""email"": ""something@gmail.com"",
             ""contact_number"": ""02165 648633""
           },
           {
@@ -122,7 +128,7 @@ namespace SpiceRanch
             ""password"": ""Bran22Tst"",
             ""address"": ""123 Cultson Ave."",
             ""postcode"": ""DJ3 8EH"",
-            ""email"": ""something @gmail.com"",
+            ""email"": ""something@gmail.com"",
             ""contact_number"": ""09674 781565""
           }
         ]";

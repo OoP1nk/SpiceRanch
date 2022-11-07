@@ -11,6 +11,15 @@ namespace SpiceRanch.structures
     {
         public int id { get; set; }
         public string? uuid { get; set; }
+        public double total { get; set; }
         public Client? client { get; set; }
+
+        public Order(int id, double total, Client client, Product product)
+        {
+            this.id = id;
+            this.uuid = client.uuid;
+            this.total = total;
+            this.client = client;
+        }
     }
 }

@@ -28,7 +28,7 @@ namespace SpiceRanch
         private HelpForm helpForm = new();
 
         private string name;
-        private int quantity;
+        private int quantity = 1;
         private double total;
 
         private readonly double deliveryCharge = 1.99;
@@ -38,16 +38,26 @@ namespace SpiceRanch
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 15,15));
             foreach(Product product in SpiceRanch.GetProductManager().GetProducts())
             {
-                cmboItems.Items.Add(product.name + " - " + product.price);
+                var pstring = "";
+                pstring += product.name;
+                if (product.sides.Length > 0)
+                {
+                    pstring += " w/";
+                    foreach (string side in product.sides)
+                    {
+                        pstring += $"{side},";
+                    }
+                }
+                cmboItems.Items.Add($"{product.id}. {(product.size != null ? product.size : "")} {pstring} - {product.price}");
             }
             lblTotal.Text = "Total: 0";
             lstbBastket.Text = "";
-            scrlQuantity.Value = 1;
+            scrlQuantity.Value = this.quantity;
         }
 
         private void scrlQuantity_Scroll(object sender, ScrollEventArgs e)
         {
-            quantity = e.NewValue;
+            this.quantity = scrlQuantity.Value;
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -57,17 +67,50 @@ namespace SpiceRanch
 
         private void cmbHelp_Click(object sender, EventArgs e)
         {
-            helpForm.ShowDialog();
+            helpForm.Show();
         }
 
+        /**
+         * Run whenever the "Order" button is clicked
+         */
         private void cmbOrder_Click(object sender, EventArgs e)
         {
-            name = txtName.Text;
+            string pId = cmboItems.Text.Split(".")[0];
+            Product? product = SpiceRanch.GetProductManager().GetProduct(Int32.Parse(pId));
+            if (product == null) return;
+
+            var totalPrice = product.price * this.quantity;
+
+            var pstring = "";
+            pstring += product.name;
+            if(product.sides.Length > 0)
+            {
+                pstring += " w/";
+                foreach(string side in product.sides)
+                {
+                    pstring += $"{side},";
+                }
+            }
+
+            Order order = new Order(SpiceRanch.GetOrderManager().GetId(), totalPrice, SpiceRanch.GetClientManager().GetActiveClient()!, product);
+            SpiceRanch.GetOrderManager().AddOrder(order);
+
+            this.setTotal();
+
+            lstbBastket.Items.Add($"{pstring} x{this.quantity} - {totalPrice}");
         }
 
-        private void txtName_TextChanged(object sender, EventArgs e)
+        private void setTotal()
         {
+            double ftotal = 0.0;
+            foreach(Order order in SpiceRanch.GetOrderManager().GetOrders())
+            {
+                ftotal += order.total;
+            }
 
+            if(rdoDelivery.Checked) { ftotal = ftotal + this.deliveryCharge; }
+            else { ftotal = ftotal; }
+            lblTotal.Text = $"Total: £{Math.Round(ftotal, 2)}";
         }
     }
 }

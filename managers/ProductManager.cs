@@ -12,6 +12,17 @@ namespace SpiceRanch.managers
             this.products = JsonConvert.DeserializeObject<List<Product>>(Utils.APIRestProductResponse)!;
         }
 
+        public Product? GetProduct(int id)
+        {
+            Product? product = null;
+            this.products.ForEach((p) =>
+            {
+                if (p.id != id) return;
+                product = p;
+            });
+            return product;
+        }
+
         public List<Product> GetProducts() { return this.products; }
     }
 }
